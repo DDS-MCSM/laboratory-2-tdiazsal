@@ -1,6 +1,6 @@
 ---
 title: "Answers Lab2"
-author: "You Name"
+author: "Antoni Diaz Salvador"
 date: "12/6/2018"
 output: html_document
 ---
