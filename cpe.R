@@ -6,14 +6,20 @@
 #                                                                              #
 #******************************************************************************#
 
-# install.packages("xml2")
-# library(xml2)
+#Library Requeriement xml2
+if(!require("xml2")){
+  install.packages("xml2")
+  library("xml2")
+}
+#Library Requeriement tidyr
+if(!require("tidyr")){
+  install.packages("tidyr")
+  library("tidyr")
+}
 
-# compressed_cpes_url <- "https://nvd.nist.gov/feeds/xml/cpe/dictionary/official-cpe-dictionary_v2.3.xml.zip"
-# cpes_filename <- "cpes.zip"
-# download.file(compressed_cpes_url, cpes_filename)
-# unzip(zipfile = cpes_filename)
+#Define URI Document XML
 cpe.file <- "./official-cpe-dictionary_v2.3.xml"
+
 
 GetCPEItems <- function(cpe.raw) {
   cpe <- NewCPEItem()
